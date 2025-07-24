@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<div class="wrap">
+		<div class="top">
+			<div>
+				<a href="javascript:;">
+					<img src="images/back.png" alt="" />
+				</a>
+			</div>
+			<div>
+				<a href="javascript:;">
+					<img src="images/search.png" alt="" />
+				</a>
+				<a href="javascript:;">
+					<img src="images/more.png" alt="" />
+				</a>
+			</div>
+		</div>
+		<div class="tx">
+			<dl>
+				<dt><img src="images/tx.png" alt="" /></dt>
+				<dd>
+					<h1>
+						饮食健康
+					</h1>
+					<p>
+						山东
+					</p>
+				</dd>
+			</dl>
+		</div>
+		<p style="font-size: 21px; font-weight: 500;display: flex; align-items: center; padding: 0 25px; box-sizing: border-box;">
+			关注饮食健康，守护幸福人生！<a href="javascript:;"><img height="21px" src="images/on.png" alt="" /></a>
+		</p>
+		<h1 style="color: #585858; font-weight: 600; font-size: 26px; margin: 30px 0;padding: 0 25px; box-sizing: border-box;">
+			3篇原创内容
+		</h1>
+		<div class="btn">
+			<button>关注公众号</button>
+		</div>
+		<ul class="menu">
+			<li>
+				<a href="javascript:;">
+					消息
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					视频号
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;">
+					服务<img src="images/more2.png" alt="" />
+				</a>
+			</li>
+		</ul>
+		<div class="main">
+			<div class="card">
+				<div class="cardTime">
+					2025年2月13日
+				</div>
+				<dl>
+					<dd>
+						<h2>
+							“春分4不吃，吃了春难安”，今日春分，家人们千万不要乱吃来路不明的野菜
+						</h2>
+						<p>
+							阅读 149  赞 3
+						</p>
+					</dd>
+					<dt>
+						<img src="images/img1.jpg" alt="" />
+					</dt>
+				</dl>
+			</div>
+			<div class="card">
+				<div class="cardTime">
+					2025年1月2日
+				</div>
+				<dl>
+					<dd>
+						<h2>
+							老人如果每天喝牛奶，用不了几个月，睡眠质量就能得到改善
+						</h2>
+						<p>
+							阅读 1149  赞 77
+						</p>
+					</dd>
+					<dt>
+						<img src="images/img2.jpeg" alt="" />
+					</dt>
+				</dl>
+			</div>
+			<div class="card">
+				<div class="cardTime">
+					2024年12月23日
+				</div>
+				<dl>
+					<dd>
+						<h2>
+							医生：这三种饮食习惯，心脏病患者一定要改掉，或会加重心脏负担
+						</h2>
+						<p>
+							阅读 5369 赞 326
+						</p>
+					</dd>
+					<dt>
+						<img src="images/img3.jpg" alt="" />
+					</dt>
+				</dl>
+			</div>
+		</div>
+		<div class="wechat" id="wechatAlert">
+			<div class="wechatContent">
+				<dl>
+					<dt>
+						<img src="images/wx.png" alt="" />
+					</dt>
+					<dd>
+						<p class="name">
+							猫猫
+						</p>
+						<p class="meg">
+							您有一条新消息
+						</p>
+					</dd>
+				</dl>
+				<div class="wechatTime">
+					刚刚
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	    window.onload = function() {
+	        const wechat = document.getElementById('wechatAlert');
+	        
+	        setTimeout(() => {
+	            wechat.classList.add('active');
+	        }, 1500);
+	
+	        setTimeout(() => {
+	            wechat.classList.remove('active');
+	            wechat.classList.add('hide');
+	        }, 4500);
+	
+	        wechat.addEventListener('transitionend', () => {
+	            if (wechat.classList.contains('hide')) {
+	                wechat.remove();
+	            }
+	        });
+	    };
+	</script>
+</body>
+</html>
