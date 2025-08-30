@@ -1,0 +1,353 @@
+<html lang="zh-CN"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>老人如果每天每天喝牛奶，用不了几个月，睡眠质量就能得到改善</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+ <!-- 配置Tailwind自定义颜色和字体 - 将主色调改为蓝色 -->
+   <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb', // 采用专业感的蓝色作为主色调
+            secondary: '#6B7280',
+            light: '#F9FAFB',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            sans: ['PingFang SC', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .article-container {
+        max-width: 720px;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* 文章段落动画 */
+    .article-paragraph {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .article-paragraph.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 按钮悬停效果 */
+    .interactive-btn {
+      transition: all 0.2s ease;
+    }
+    
+    .interactive-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* 导航按钮动画 */
+    .nav-btn {
+      transition: background-color 0.2s ease;
+    }
+    
+    /* 微信式消息弹窗动画 */
+    .wechat-notification {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+    
+    .wechat-notification.show {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-dark">
+  
+<!-- 弹窗 -->
+<div id="wechatNotification" class="wechat-notification fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-md z-50 p-3">
+  <div class="flex items-center max-w-2xl mx-auto">
+    <div class="w-10 h-10 rounded-full bg-wechat flex items-center justify-center text-white mr-3 flex-shrink-0">
+      <img src="images/wx.png" alt="微信头像" class="w-full h-full object-cover">
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class="flex justify-between items-center mb-1">
+        <h3 class="font-medium text-gray-900 truncate">猫猫</h3>
+        <span class="text-xs text-gray-500">刚刚</span>
+      </div>
+      <p class="text-sm text-gray-700 truncate">您有一条新消息</p>
+    </div>
+  </div>
+</div>
+
+  <!-- 文章标题栏 -->
+  <div class="bg-white border-b border-gray-100 sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-times text-gray-600"></i>
+      </button>
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-ellipsis-v text-gray-600"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- 文章内容区 -->
+  <main class="article-container mx-auto bg-white px-6 py-8">
+    <!-- 文章标题 -->
+    <h1 class="text-[clamp(1.5rem,5vw,2.25rem)] font-bold leading-tight mb-6 text-balance">老人如果每天喝牛奶，用不了几个月，睡眠质量就能得到改善</h1>
+    
+    <!-- 文章元数据 -->
+    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-8">
+      <span class="text-primary mr-4">饮食健康</span>
+      <span class="mr-4">2025年01月02日 09:15</span>
+      <span class="mr-4">全国</span>
+      <button class="flex items-center text-primary hover:underline transition-colors">
+        <i class="fa fa-headphones mr-1"></i> 听全文
+      </button>
+    </div>
+    
+    <!-- 星标按钮 -->
+    <div class="mb-8">
+      <button class="flex items-center text-gray-400 hover:text-yellow-400 transition-colors">
+        <i class="fa fa-star-o mr-1"></i> 星标
+      </button>
+    </div>
+    
+    <!-- 文章内容 -->
+    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+      <p class="article-paragraph">
+        随着年龄增长，许多老年人都会面临睡眠质量下降的问题。入睡困难、夜间易醒、早醒等睡眠障碍不仅影响生活质量，还可能引发多种健康问题。
+      </p>
+      
+      <p class="article-paragraph">
+        其实改善老年人睡眠质量的方法很简单，坚持每天喝一杯牛奶就是一个经济有效的选择。研究表明，老年人如果能坚持每天饮用适量牛奶，通常在2-3个月内就能明显感受到睡眠质量的改善。
+      </p>
+      
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        牛奶为何能改善睡眠？
+      </h2>
+      
+      <p class="article-paragraph">
+        牛奶中含有多种有助于睡眠的营养成分，其中最主要的是色氨酸。色氨酸是一种必需氨基酸，它是合成血清素和褪黑素的前体物质，而后两者正是调节睡眠的关键激素。
+      </p>
+      
+      <p class="article-paragraph">
+        此外，牛奶中含有丰富的钙，钙能帮助大脑利用色氨酸制造褪黑素；同时牛奶中的镁元素也有放松神经、促进睡眠的作用。这些营养成分共同作用，能有效改善睡眠质量。
+      </p>
+      
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        老年人喝牛奶的正确方法
+      </h2>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        1. 饮用时间要适宜
+      </h3>
+      
+      <p class="article-paragraph">
+        最佳饮用时间是睡前1-1.5小时，这样能给身体足够的时间吸收营养成分，发挥助眠效果。避免临睡前才喝，以免夜间起夜影响睡眠。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        2. 控制合适的饮用量
+      </h3>
+      
+      <p class="article-paragraph">
+        老年人每天饮用300-500毫升牛奶为宜。过量饮用可能增加肠胃负担，反而影响睡眠。可以分早晚两次饮用，既能保证营养，又不会给身体带来负担。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        3. 选择合适的牛奶类型
+      </h3>
+      
+      <p class="article-paragraph">
+        普通全脂牛奶、低脂牛奶均可。对于有乳糖不耐受的老年人，可以选择舒化奶或发酵酸奶，这些产品中的乳糖已被分解，更易消化吸收。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        4. 饮用温度要适中
+      </h3>
+      
+      <p class="article-paragraph">
+        牛奶不宜过烫或过凉，温热（40℃左右）饮用最佳。过烫会破坏营养成分，过凉则可能刺激肠胃。
+      </p>
+      
+      <!-- 注意事项列表 -->
+      <div class="my-8 bg-green-50 p-6 rounded-xl border border-green-100">
+        <h3 class="text-lg font-bold mb-4 text-primary">老年人饮用牛奶注意事项</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">1</span>
+            <span>不要空腹喝牛奶，可搭配少量全麦面包或饼干，促进营养吸收</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">2</span>
+            <span>牛奶过敏者不宜饮用，可选择豆制品替代获取优质蛋白</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">3</span>
+            <span>有严重肾脏疾病的老人，应在医生指导下饮用，控制蛋白质摄入量</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">4</span>
+            <span>选择正规品牌的牛奶产品，注意查看生产日期和保质期</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">5</span>
+            <span>牛奶只是辅助改善睡眠的方式之一，还需配合规律作息和良好心态</span>
+          </li>
+        </ul>
+      </div>
+      
+      <p class="article-paragraph">
+        改善老年人睡眠是一个需要耐心的过程，坚持科学饮用牛奶的同时，还应保持规律的作息时间，营造安静舒适的睡眠环境，适当进行日间活动。多管齐下，才能让长辈们拥有更好的睡眠质量，安享健康晚年。
+      </p>
+    </div>
+  </main>
+  
+  <!-- 底部互动栏 -->
+  <footer class="bg-white border-t border-gray-100 sticky bottom-0 z-40 py-3">
+    <div class="article-container mx-auto px-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="images/tx.png" alt="作者头像" class="w-10 h-10 rounded-full mr-3">
+          <span class="text-gray-700 font-medium">饮食健康</span>
+        </div>
+        
+        <div class="flex space-x-6">
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-thumbs-o-up text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">797</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-share text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">442</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-heart-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">413</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-comment-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">写留言</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // 监听滚动，为进入视口的段落添加动画
+    document.addEventListener('DOMContentLoaded', () => {
+      // 弹窗
+       const notification = document.getElementById('wechatNotification');
+      
+      // 页面加载0.5秒后显示弹窗
+      setTimeout(() => {
+        notification.classList.add('show');
+        
+        // 2秒后自动隐藏弹窗
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 2000);
+      }, 500);
+      
+      // 文章段落动画
+      const paragraphs = document.querySelectorAll('.article-paragraph');
+      
+      // 初始检查可见元素
+      checkVisibility();
+      
+      // 监听滚动事件
+      window.addEventListener('scroll', checkVisibility);
+      
+      function checkVisibility() {
+        paragraphs.forEach(paragraph => {
+          const rect = paragraph.getBoundingClientRect();
+          const isVisible = (
+            rect.top < window.innerHeight * 0.8 &&
+            rect.bottom > 0
+          );
+          
+          if (isVisible) {
+            paragraph.classList.add('visible');
+          }
+        });
+      }
+      
+      // 点赞按钮功能
+      const likeBtn = document.querySelector('.fa-thumbs-o-up').parentElement;
+      likeBtn.addEventListener('click', () => {
+        const icon = likeBtn.querySelector('i');
+        const count = likeBtn.querySelector('span');
+        if (icon.classList.contains('fa-thumbs-o-up')) {
+          icon.classList.remove('fa-thumbs-o-up');
+          icon.classList.add('fa-thumbs-up', 'text-red-500'); 
+          count.textContent = '798';
+        } else {
+          icon.classList.remove('fa-thumbs-up', 'text-red-500');
+          icon.classList.add('fa-thumbs-o-up');
+          count.textContent = '797';
+        }
+      });
+      
+      
+      // 收藏按钮功能
+      const favoriteBtn = document.querySelector('.fa-heart-o').parentElement;
+      favoriteBtn.addEventListener('click', () => {
+        const icon = favoriteBtn.querySelector('i');
+        const count = favoriteBtn.querySelector('span');
+        if (icon.classList.contains('fa-heart-o')) {
+          icon.classList.remove('fa-heart-o');
+          icon.classList.add('fa-heart', 'text-red-500');
+          count.textContent = '414';
+        } else {
+          icon.classList.remove('fa-heart', 'text-red-500');
+          icon.classList.add('fa-heart-o');
+          count.textContent = '413';
+        }
+      });
+      
+      // 星标按钮功能
+      const starBtn = document.querySelector('.fa-star-o').parentElement;
+      starBtn.addEventListener('click', () => {
+        const icon = starBtn.querySelector('i');
+        if (icon.classList.contains('fa-star-o')) {
+          icon.classList.remove('fa-star-o');
+          icon.classList.add('fa-star', 'text-yellow-400');
+        } else {
+          icon.classList.remove('fa-star', 'text-yellow-400');
+          icon.classList.add('fa-star-o');
+        }
+      });
+    });
+  </script>
+
+
+    </body></html>

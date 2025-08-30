@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>“春分4不吃，吃了春难安"，今日春分，家人们千万不要乱吃来路不明的野菜</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb', 
+            secondary: '#6B7280',
+            light: '#F9FAFB',
+            dark: '#1F2937'
+          },
+          fontFamily: {
+            sans: ['PingFang SC', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .article-container {
+        max-width: 720px;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 平滑滚动 */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* 文章段落动画 */
+    .article-paragraph {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    
+    .article-paragraph.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* 按钮悬停效果 */
+    .interactive-btn {
+      transition: all 0.2s ease;
+    }
+    
+    .interactive-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* 导航按钮动画 */
+    .nav-btn {
+      transition: background-color 0.2s ease;
+    }
+    
+    /* 微信式消息弹窗动画 */
+    .wechat-notification {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-out;
+    }
+    
+    .wechat-notification.show {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-dark">
+
+  <!-- 弹窗 -->
+  <div id="wechatNotification" class="wechat-notification fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-md z-50 p-3">
+    <div class="flex items-center max-w-2xl mx-auto">
+      <div class="w-10 h-10 rounded-full bg-wechat flex items-center justify-center text-white mr-3 flex-shrink-0">
+        <img src="images/wx.png" alt="微信头像" class="w-full h-full object-cover">
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex justify-between items-center mb-1">
+          <h3 class="font-medium text-gray-900 truncate">猫猫</h3>
+          <span class="text-xs text-gray-500">刚刚</span>
+        </div>
+        <p class="text-sm text-gray-700 truncate">您有一条新消息</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 文章标题栏 -->
+  <div class="bg-white border-b border-gray-100 sticky top-0 z-40">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-times text-gray-600"></i>
+      </button>
+      <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
+        <i class="fa fa-ellipsis-v text-gray-600"></i>
+      </button>
+    </div>
+  </div>
+  
+  <!-- 文章内容区 -->
+  <main class="article-container mx-auto bg-white px-6 py-8">
+    <!-- 文章标题 -->
+    <h1 class="text-[clamp(1.5rem,5vw,2.25rem)] font-bold leading-tight mb-6 text-balance">
+      “春分4不吃，吃了春难安"，今日春分，家人们千万不要乱吃来路不明的野菜
+    </h1>
+    
+    <!-- 文章元数据 -->
+    <div class="flex flex-wrap items-center text-sm text-gray-500 mb-8">
+      <span class="text-primary mr-4">饮食健康</span>
+      <span class="mr-4">2025年03月20日 16:08</span>
+      <span class="mr-4">山东</span>
+      <button class="flex items-center text-primary hover:underline transition-colors">
+        <i class="fa fa-headphones mr-1"></i> 听全文
+      </button>
+    </div>
+    
+    <!-- 星标按钮 -->
+    <div class="mb-8">
+      <button class="flex items-center text-gray-400 hover:text-yellow-400 transition-colors">
+        <i class="fa fa-star-o mr-1"></i> 星标
+      </button>
+    </div>
+    
+    <!-- 文章内容 -->
+    <div class="space-y-6 text-gray-800 leading-relaxed text-lg">
+      <p class="article-paragraph">
+        春分，是春季九十天的中分点，昼夜平分，寒暑平衡。此时节，大自然生机勃勃，万物复苏，但也是各种疾病容易滋生的时期。
+      </p>
+      
+      <p class="article-paragraph">
+        民间有"春分4不吃，吃了春难安"的说法，提醒人们在这个特殊的节气里，饮食上要格外注意，尤其是不要随意食用来源不明的野菜。
+      </p>
+      
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        春分为何要注意饮食？
+      </h2>
+      
+      <p class="article-paragraph">
+        中医认为，春分时节阴阳平衡，人体新陈代谢旺盛，但也容易出现肝火旺盛、脾胃虚弱等情况。此时若饮食不当，很容易引发身体不适。
+      </p>
+      
+      <p class="article-paragraph">
+        另外，春季是野菜生长的旺季，很多人喜欢采摘野菜尝鲜，但其中不乏有毒品种，误食可能导致中毒。
+      </p>
+      
+      <h2 class="article-paragraph text-xl font-bold mt-8 mb-4 text-primary">
+        春分"4不吃"指的是什么？
+      </h2>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        1. 不食来源不明的野菜
+      </h3>
+      
+      <p class="article-paragraph">
+        春季野菜种类繁多，很多有毒野菜与可食用野菜外形相似，难以辨别。如不认识或来源不明的野菜，坚决不要食用，以免中毒。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        2. 不吃生冷食物
+      </h3>
+      
+      <p class="article-paragraph">
+        春分时节乍暖还寒，脾胃功能较弱，食用生冷食物容易引起肠胃不适，导致腹痛、腹泻等症状。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        3. 少吃辛辣刺激食物
+      </h3>
+      
+      <p class="article-paragraph">
+        春季易上火，食用过多辛辣刺激食物会加重体内燥热，引发口腔溃疡、咽喉肿痛等问题。
+      </p>
+      
+      <h3 class="article-paragraph text-lg font-bold mt-6 mb-3">
+        4. 不吃过咸过油食物
+      </h3>
+      
+      <p class="article-paragraph">
+        过咸过油的食物会加重肠胃负担，影响春季新陈代谢，不利于身体健康。
+      </p>
+      
+      <!-- 推荐食物列表 -->
+      <div class="my-8 bg-green-50 p-6 rounded-xl border border-green-100">
+        <h3 class="text-lg font-bold mb-4 text-primary">春分推荐养生食物</h3>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">1</span>
+            <span>春笋：清热化痰，益气和胃，是春季的时令佳肴</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">2</span>
+            <span>菠菜：养肝明目，补血止血，适合春分时节食用</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">3</span>
+            <span>韭菜：温肾壮阳，健脾养胃，春季食用有益健康</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">4</span>
+            <span>蜂蜜：滋阴润燥，润肠通便，能增强人体免疫力</span>
+          </li>
+          <li class="flex items-start">
+            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">5</span>
+            <span>春茶：提神醒脑，消食化积，春分后新茶上市，适量饮用有益</span>
+          </li>
+        </ul>
+      </div>
+      
+      <p class="article-paragraph">
+        春分时节，除了注意饮食，还应保持规律作息，适当运动，保持心情舒畅，才能更好地适应季节变化，保持身体健康。
+      </p>
+    </div>
+  </main>
+  
+  <!-- 底部互动栏 -->
+  <footer class="bg-white border-t border-gray-100 sticky bottom-0 z-40 py-3">
+    <div class="article-container mx-auto px-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="images/tx.png" alt="作者头像" class="w-10 h-10 rounded-full mr-3">
+          <span class="text-gray-700 font-medium">饮食健康</span>
+        </div>
+        
+        <div class="flex space-x-6">
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-thumbs-o-up text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">509</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-share text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">273</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-heart-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">386</span>
+          </button>
+          
+          <button class="interactive-btn flex flex-col items-center">
+            <i class="fa fa-comment-o text-gray-500 text-xl"></i>
+            <span class="text-xs text-gray-500 mt-1">写留言</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // 监听滚动，为进入视口的段落添加动画
+    document.addEventListener('DOMContentLoaded', () => {
+      // 弹窗
+       const notification = document.getElementById('wechatNotification');
+      
+      // 页面加载2秒后显示弹窗
+      setTimeout(() => {
+        notification.classList.add('show');
+        
+        // 2秒后自动隐藏弹窗
+        setTimeout(() => {
+          notification.classList.remove('show');
+        }, 4000);
+      }, 2000);
+      
+      // 文章段落动画
+      const paragraphs = document.querySelectorAll('.article-paragraph');
+      
+      // 初始检查可见元素
+      checkVisibility();
+      
+      // 监听滚动事件
+      window.addEventListener('scroll', checkVisibility);
+      
+      function checkVisibility() {
+        paragraphs.forEach(paragraph => {
+          const rect = paragraph.getBoundingClientRect();
+          const isVisible = (
+            rect.top < window.innerHeight * 0.8 &&
+            rect.bottom > 0
+          );
+          
+          if (isVisible) {
+            paragraph.classList.add('visible');
+          }
+        });
+      }
+      
+      // 点赞
+      const likeBtn = document.querySelector('.fa-thumbs-o-up').parentElement;
+      likeBtn.addEventListener('click', () => {
+        const icon = likeBtn.querySelector('i');
+        const count = likeBtn.querySelector('span');
+        if (icon.classList.contains('fa-thumbs-o-up')) {
+          icon.classList.remove('fa-thumbs-o-up');
+          icon.classList.add('fa-thumbs-up', 'text-red-500'); 
+          count.textContent = '510';
+        } else {
+          icon.classList.remove('fa-thumbs-up', 'text-red-500');
+          icon.classList.add('fa-thumbs-o-up');
+          count.textContent = '509';
+        }
+      });
+      
+      
+      // 收藏
+      const favoriteBtn = document.querySelector('.fa-heart-o').parentElement;
+      favoriteBtn.addEventListener('click', () => {
+        const icon = favoriteBtn.querySelector('i');
+        const count = favoriteBtn.querySelector('span');
+        if (icon.classList.contains('fa-heart-o')) {
+          icon.classList.remove('fa-heart-o');
+          icon.classList.add('fa-heart', 'text-red-500');
+          count.textContent = '387';
+        } else {
+          icon.classList.remove('fa-heart', 'text-red-500');
+          icon.classList.add('fa-heart-o');
+          count.textContent = '386';
+        }
+      });
+      
+      // 星标
+      const starBtn = document.querySelector('.fa-star-o').parentElement;
+      starBtn.addEventListener('click', () => {
+        const icon = starBtn.querySelector('i');
+        if (icon.classList.contains('fa-star-o')) {
+          icon.classList.remove('fa-star-o');
+          icon.classList.add('fa-star', 'text-yellow-400');
+        } else {
+          icon.classList.remove('fa-star', 'text-yellow-400');
+          icon.classList.add('fa-star-o');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+    
