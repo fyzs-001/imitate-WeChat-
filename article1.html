@@ -89,24 +89,26 @@
 <body class="bg-gray-50 font-sans text-dark">
 
   <!-- 弹窗 -->
-  <div id="wechatNotification" class="wechat-notification fixed top-0 left-0 right-0 bg-white border-b border-gray-200 shadow-md z-50 p-3">
-    <div class="flex items-center max-w-2xl mx-auto">
-      <div class="w-10 h-10 rounded-full bg-wechat flex items-center justify-center text-white mr-3 flex-shrink-0">
-        <img src="images/wx.png" alt="微信头像" class="w-full h-full object-cover">
-      </div>
-      <div class="flex-1 min-w-0">
-        <div class="flex justify-between items-center mb-1">
-          <h3 class="font-medium text-gray-900 truncate">猫猫</h3>
-          <span class="text-xs text-gray-500">刚刚</span>
+  <div id="wechatNotification" class="wechat-notification fixed top-0 left-0 right-0 z-50">
+    <div class="article-container mx-auto bg-white border border-gray-200 shadow-md p-3 rounded-xl overflow-hidden">
+      <div class="flex items-center">
+        <div class="w-10 h-10 rounded-full bg-wechat flex items-center justify-center text-white mr-3 flex-shrink-0">
+          <img src="images/wx.png" alt="微信头像" class="w-full h-full object-cover">
         </div>
-        <p class="text-sm text-gray-700 truncate">您有一条新消息</p>
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between items-center mb-1">
+            <h3 class="font-medium text-gray-900 truncate">猫猫</h3>
+            <span class="text-xs text-gray-500">刚刚</span>
+          </div>
+          <p class="text-sm text-gray-700 truncate">您有一条新消息</p>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 文章标题栏 -->
   <div class="bg-white border-b border-gray-100 sticky top-0 z-40">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="article-container mx-auto px-6 py-4 flex justify-between items-center">
       <button class="nav-btn w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100">
         <i class="fa fa-times text-gray-600"></i>
       </button>
