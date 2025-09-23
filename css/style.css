@@ -1,4 +1,3 @@
-/* 基础样式重置 */
 body,
 div,
 ul,
@@ -32,9 +31,6 @@ body {
 	font-family: "microsoft yahei";
 	color: #000000;
 	background-color: #efefef;
-	/* 确保页面可以占满整个视口宽度 */
-	width: 100%;
-	min-width: 320px; /* 最小宽度限制，适配移动设备 */
 }
 
 ul,
@@ -58,7 +54,6 @@ select,
 textarea {
 	vertical-align: middle;
 	outline: none;
-	max-width: 100%; /* 图片等元素最大宽度不超过父容器 */
 }
 
 img {
@@ -81,12 +76,10 @@ a:hover {
 	overflow: hidden;
 }
 
-/* 主容器使用百分比宽度 */
 .wrap {
-	width: 90%; /* 占屏幕宽度的90% */
-	max-width: 750px; /* 最大宽度限制，防止在大屏幕上过宽 */
+	width: 750px;
 	height: auto;
-	padding: 3% 0; /* 使用百分比内边距 */
+	padding: 20px 0;
 	box-sizing: border-box;
 	margin: 0 auto;
 	background-color: #fff;
@@ -97,7 +90,7 @@ a:hover {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 3.33%; /* 25px/750px ≈ 3.33% */
+	padding: 0 25px;
 	box-sizing: border-box;
 }
 
@@ -107,7 +100,7 @@ a:hover {
 }
 
 .top div:last-child {
-	gap: 2.67%; /* 20px/750px ≈ 2.67% */
+	gap: 20px;
 }
 
 .top div a {
@@ -121,70 +114,77 @@ a:hover {
 
 .tx {
 	width: 100%;
-	margin: 5.33% 0; /* 40px/750px ≈ 5.33% */
-	padding: 0 3.33%; /* 25px/750px ≈ 3.33% */
+	margin: 40px 0;
+	padding: 0 25px;
 	box-sizing: border-box;
 }
 
 .tx dl {
 	display: flex;
-	height: 20vw; /* 使用视口宽度的20%作为高度，保持比例 */
-	max-height: 150px; /* 最大高度限制 */
+	height: 150px;
 	align-items: center;
+
 }
 
 .tx dl dt {
 	height: 100%;
-	margin-right: 2.67%; /* 20px/750px ≈ 2.67% */
+	margin-right: 20px;
 }
 
 .tx dl dt img {
 	height: 100%;
-	border-radius: 50%; /* 修正原代码的笔误，实现圆形头像 */
-	width: 20%; /* 150px/750px = 20% */
+	border: 50%;
+	width: 150px;
 }
 
 .tx dl dd {
-  font-size: clamp(16px, 3.47vw, 26px); /* 最小16px，首选3.47vw，最大26px */
-  color: #999;
+	font-size: 26px;
+	color: #999;
 }
+
 .tx dl dd h1 {
-  font-size: clamp(24px, 5.07vw, 38px); /* 最小24px，首选5.07vw，最大38px */
-  letter-spacing: 5px;
-  color: #000;
+	font-size: 38px;
+	letter-spacing: 5px;
+	color: #000;
 }
 
 .btn {
 	width: 100%;
-	padding: 0 3.33%; /* 25px/750px ≈ 3.33% */
+	padding: 0 25px;
 	box-sizing: border-box;
 }
 
 .btn button {
-  /* 其他样式保持不变 */
-  font-size: clamp(16px, 3.2vw, 24px); /* 最小16px，首选3.2vw，最大24px */
+	width: 100%;
+	height: 70px;
+	background-color: #06c263;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font-size: 24px;
 }
 
 .menu {
 	width: 100%;
-	padding: 0 3.33%; /* 25px/750px ≈ 3.33% */
+	padding: 0 25px;
 	box-sizing: border-box;
 }
 
 .menu {
 	display: flex;
 	align-items: center;
-	gap: 2.67%; /* 20px/750px ≈ 2.67% */
-	margin: 5.33% 0; /* 40px/750px ≈ 5.33% */
+	gap: 20px;
+	margin: 40px 0;
 }
 
 .menu li {
-	padding: 0 0.4%;
-	padding-bottom: 0.67%; /* 5px/750px ≈ 0.67% */
+	padding: 0 3px;
+	padding-bottom: 5px;
+
 }
 
 .menu li a {
-  font-size: clamp(16px, 3.2vw, 24px); /* 最小16px，首选3.2vw，最大24px */
+	font-size: 24px;
 }
 
 .menu li a img {
@@ -198,27 +198,34 @@ a:hover {
 .main {
 	background-color: #fafafa;
 	width: 100%;
-	padding: 2% 3.33%; /* 15px/750px ≈ 2% */
+	padding: 15px 25px;
 	box-sizing: border-box;
+
 }
 
 .card {
-  font-size: clamp(16px, 3.47vw, 26px); /* 最小16px，首选3.47vw，最大26px */
-  /* 其他样式保持不变 */
+	width: 100%;
+	background-color: #fff;
+	font-size: 26px;
+	padding: 30px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+
 }
+
 .card dl dd h2 {
-  font-size: clamp(16px, 3.47vw, 26px); /* 最小16px，首选3.47vw，最大26px */
-  line-height: 1.5em;
+	font-size: 26px;
+	line-height: 1.5em;
 }
 
 .card dl dd p {
 	color: #ccc;
-	margin-top: 2%; /* 15px/750px = 2% */
+	margin-top: 15px;
 }
 
 .cardTime {
 	color: #ccc;
-	margin-bottom: 6.4%; /* 48px/750px = 6.4% */
+	margin-bottom: 48px;
 }
 
 .card dl {
@@ -227,31 +234,30 @@ a:hover {
 }
 
 .card dl dt {
-	width: 16.67%; /* 125px/750px ≈ 16.67% */
+	width: 125px;
 }
 
 .card dl dt img {
 	width: 100%;
-	height: 16vw; /* 120px/750px = 16% */
-	max-height: 120px;
-	border-radius: 0.67vw; /* 5px/750px ≈ 0.67% */
+	height: 120px;
+	border-radius: 5px;
 }
 
 .card dl dd {
 	flex: 1;
-	margin-right: 2.67%; /* 20px/750px ≈ 2.67% */
+	margin-right: 20px;
 }
 
 .wechat {
-	width: 90%; /* 与wrap保持一致 */
-	max-width: 750px;
-	padding: 0 3.33%; /* 25px/750px ≈ 3.33% */
+	width: 750px;
+	padding: 0 25px;
 	box-sizing: border-box;
 	position: fixed;
-	border-radius: 2.67vw; /* 20px/750px ≈ 2.67% */
+	border-radius: 20px;
 	overflow: hidden;
-	box-shadow: 0 0 2% 0.27% rgba(0, 0, 0, .3); /* 15px/750px = 2% */
-	top: -13.33%; /* 100px/750px ≈ 13.33% */
+	box-shadow: 0 0 15px 2px rgba(0, 0, 0, .3);
+	top: -100px;
+	/* 初始位置在可视区域上方 */
 	left: 50%;
 	transform: translateX(-50%);
 	opacity: 0;
@@ -260,19 +266,20 @@ a:hover {
 }
 
 .wechat.active {
-	top: 2.67%; /* 20px/750px ≈ 2.67% */
+	top: 20px;
 	opacity: 1;
 }
 
 .wechat.hide {
-	top: -13.33%; /* 100px/750px ≈ 13.33% */
+	top: -100px;
 	opacity: 0;
 }
 
 .wechatContent {
 	width: 100%;
 	background-color: #fff;
-	padding: 4% 2.67%; /* 30px/750px = 4% */
+
+	padding: 30px 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: start;
@@ -285,7 +292,7 @@ a:hover {
 }
 
 .wechatContent dl dt {
-	width: 6.67%; /* 50px/750px ≈ 6.67% */
+	width: 50px;
 }
 
 .wechatContent dl dt img {
@@ -293,14 +300,18 @@ a:hover {
 }
 
 .wechatContent dl dd {
-  font-size: clamp(16px, 3.33vw, 25px); /* 最小16px，首选3.33vw，最大25px */
-  /* 其他样式保持不变 */
-}
-.wechatTime {
-  font-size: clamp(16px, 3.33vw, 25px); /* 最小16px，首选3.33vw，最大25px */
-  color: #999;
+	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-left: 20px;
 }
 
 .meg {
+	color: #999;
+}
+
+.wechatTime {
+	font-size: 25px;
 	color: #999;
 }
